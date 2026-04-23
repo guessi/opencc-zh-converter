@@ -58,4 +58,11 @@ node scripts/gen-dict.js "$DICT_DIR" "${DICT_FILES[*]}" "${REVERSE_MAPS[*]}" "${
 
 rm -f "$DICT_DIR"/*.txt
 
+echo "==> Verifying exclusions ..."
+if grep -q '"核心"' "$DICT_DIR/TWPhrasesRev.ts"; then
+  echo "ERROR: TWPhrasesRev.ts still contains excluded key \"核心\""
+  exit 1
+fi
+echo "    OK"
+
 echo "==> Done."

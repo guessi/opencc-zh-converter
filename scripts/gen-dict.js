@@ -71,6 +71,16 @@ function writeModule(name, entries) {
   fs.writeFileSync(dir + "/" + name + ".ts", lines.join("\n"));
 }
 
+// Entries to remove from specific dictionaries after generation.
+// These correct known bad reverse mappings in OpenCC upstream data.
+// Format: { "DictName": Set(["key1", "key2", ...]) }
+const EXCLUSIONS = {
+  // "核心" (core) ≠ "內核" (kernel). The upstream TWPhrasesRev mechanically
+  // reverses TWPhrases "內核→核心", producing "核心→內核" which is wrong —
+  // both sides use "核心" to mean "core".
+  TWPhrasesRev: new Set(["核心"]),
+};
+
 // Generate forward maps
 for (const name of names) {
   let entries = parseDict(name, { keepIdentity: keepIdentitySet.has(name) });

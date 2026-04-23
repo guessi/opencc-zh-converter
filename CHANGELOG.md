@@ -14,4 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Pure JavaScript implementation using OpenCC dictionary data
 - Zero runtime dependencies
 
+### Fixed
+
+- Exclude incorrect TWPhrasesRev mapping "核心→內核" — "核心" (core) is not "內核" (kernel)
+
 [1.0.0]: https://github.com/guessi/vscode-opencc-convert/releases/tag/v1.0.0

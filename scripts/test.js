@@ -37,6 +37,25 @@ assert("tw2s", TWP, T2S);
 assert("s2twp", ZHS, TWP);
 assert("tw2sp", TWP, ZHS);
 
+// -- Exclusion: "核心" must not become "內核" (TWPhrasesRev fix) --
+assert("tw2sp", "核心", "核心");
+assert("tw2sp", "多核心架構", "多核心架构");
+assert("tw2sp", "核心技術", "核心技术");
+
+// -- "內核" (kernel) is a distinct word and must convert normally --
+assert("tw2sp", "內核", "内核");
+assert("tw2sp", "Linux 內核", "Linux 内核");
+assert("tw2sp", "宏內核", "宏内核");
+assert("s2twp", "宏内核", "單核心");
+
+// -- "什麼" / "甚麼" phrase shields (TWVariantsRevPhrases prevents 么→幺) --
+assert("tw2sp", "什麼", "什么");
+assert("tw2sp", "為什麼", "为什么");
+assert("tw2sp", "沒什麼", "没什么");
+assert("tw2sp", "甚麼", "甚么");
+assert("s2twp", "什么", "什麼");
+assert("s2twp", "为什么", "為什麼");
+
 // -- Edge cases --
 assert("s2t", "", "");
 assert("s2t", "Hello World", "Hello World");
