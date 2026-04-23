@@ -1,0 +1,6 @@
+out
+dist
+node_modules
+src/dict
+package-lock.json
+*.vsix

@@ -1,0 +1,15 @@
+src
+.vscode
+.gitignore
+.prettierrc
+.prettierignore
+.markdownlint.json
+eslint.config.mjs
+tsconfig.json
+package-lock.json
+scripts
+
+assets/icon.svg
+**/*.map
+**/*.ts
+!**/*.d.ts

@@ -1,0 +1,72 @@
+{
+  "name": "opencc-zh-converter",
+  "displayName": "OpenCC 繁簡轉換",
+  "description": "使用 OpenCC 的 VS Code 中文繁簡轉換插件",
+  "version": "1.0.0",
+  "publisher": "guessi",
+  "license": "Apache-2.0",
+  "icon": "assets/icon.png",
+  "keywords": [
+    "chinese",
+    "opencc",
+    "traditional",
+    "simplified"
+  ],
+  "categories": [
+    "Formatters",
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guessi/vscode-opencc-convert"
+  },
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "opencc-convert.s2t.phrase",
+        "category": "OpenCC 繁簡轉換",
+        "title": "s2tp: 简体 → 繁體（台湾词汇）"
+      },
+      {
+        "command": "opencc-convert.t2s.phrase",
+        "category": "OpenCC 繁簡轉換",
+        "title": "t2sp: 繁體 → 简体（臺灣詞彙）"
+      },
+      {
+        "command": "opencc-convert.s2t",
+        "category": "OpenCC 繁簡轉換",
+        "title": "s2t: 简体 → 繁體"
+      },
+      {
+        "command": "opencc-convert.t2s",
+        "category": "OpenCC 繁簡轉換",
+        "title": "t2s: 繁體 → 简体"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build:icon && npm run build:dict && npm run compile",
+    "build:icon": "bash scripts/convert-icon.sh",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src scripts --ignore-pattern src/dict && markdownlint '**/*.md' --ignore node_modules && shellcheck scripts/*.sh && prettier --check .",
+    "format": "prettier --write .",
+    "build:dict": "bash scripts/build-dict.sh",
+    "test": "node scripts/test.js",
+    "clean": "rm -rf out dist",
+    "package": "bash scripts/package.sh"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/vscode": "^1.97.0",
+    "eslint": "^10.2.0",
+    "markdownlint-cli": "^0.48.0",
+    "prettier": "^3.8.1",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.58.0"
+  }
+}
