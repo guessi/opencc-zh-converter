@@ -28,6 +28,12 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Install CJK fonts
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends fonts-noto-cjk
+          fc-cache -f
+
       - name: Build and test
         run: |
           npm ci
