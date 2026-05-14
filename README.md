@@ -13,6 +13,17 @@ A VS Code extension for converting between Simplified and Traditional Chinese, u
 - Fully offline — no network access required
 - Zero runtime dependencies
 
+## Installation
+
+Download the latest `.vsix` from [GitHub Releases](https://github.com/guessi/vscode-opencc-convert/releases),
+then install it:
+
+```bash
+code --install-extension opencc-zh-converter-*.vsix
+```
+
+Or in VS Code: `Cmd+Shift+P` → `Extensions: Install from VSIX...` → select the `.vsix` file.
+
 ## Usage
 
 1. Select text in the editor (or leave empty to convert the entire file)
@@ -35,37 +46,41 @@ A VS Code extension for converting between Simplified and Traditional Chinese, u
 
 All commands are grouped under the `OpenCC 繁簡轉換` category in the Command Palette.
 
-## Installation
-
-Download the latest `.vsix` from [GitHub Releases](https://github.com/guessi/vscode-opencc-convert/releases),
-then install it:
-
-```bash
-code --install-extension opencc-zh-converter-*.vsix
-```
-
-Or in VS Code: `Cmd+Shift+P` → `Extensions: Install from VSIX...` → select the `.vsix` file.
-
 ## Requirements
 
 - VS Code 1.120.0 or later
 
-## Why This Extension?
+## Credits
+
+- Dictionary data from [OpenCC](https://github.com/BYVoid/OpenCC) by BYVoid (Apache-2.0)
+- Inspired by [vscode-zh-convertor](https://github.com/hongfanmeng/vscode-zh-convertor)
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and release instructions.
+
+## License
+
+[Apache-2.0](LICENSE)
+
+## Why this extension?
 
 All projects listed below are based on dictionary data from [OpenCC](https://github.com/BYVoid/OpenCC), but differ in scope, maintenance status, and design:
 
-|                       | opencc-zh-converter | vscode-chinese-translation | vscode-zh-convertor | simptradconv-openccjs |
-| --------------------- | ------------------- | -------------------------- | ------------------- | --------------------- |
-| Maintenance Status    | Active              | Unmaintained (2016)        | Unmaintained (2021) | Unmaintained (2023)   |
-| Dictionary Data       | OpenCC (latest)     | node-opencc (2016)         | opencc-js (2022)    | opencc-js (2022)      |
-| Runtime Dependencies  | None                | `node-opencc`              | `opencc-js`         | `opencc-js`           |
-| `s2t`                 | ✅                  | ✅                         | ✅                  | ✅                    |
-| `t2s`                 | ✅                  | ✅                         | ✅                  | ✅                    |
-| `s2tp`                | ✅                  | ✅                         | ❌                  | ❌                    |
-| `t2sp`                | ✅                  | ✅                         | ❌                  | ❌                    |
-| Offline               | ✅                  | ✅                         | ✅                  | ✅                    |
-| License               | Apache-2.0          | MIT                        | Not specified       | MIT                   |
-| Apache-2.0 Compatible | ✅                  | ✅                         | ⚠️                  | ✅                    |
+<details>
+<summary>Comparison with other extensions</summary>
+
+|                      | opencc-zh-converter | vscode-chinese-translation | vscode-zh-convertor | simptradconv-openccjs |
+| -------------------- | ------------------- | -------------------------- | ------------------- | --------------------- |
+| Maintenance Status   | Active              | Unmaintained (2016)        | Unmaintained (2021) | Unmaintained (2023)   |
+| Dictionary Data      | OpenCC (latest)     | node-opencc (2016)         | opencc-js (2022)    | opencc-js (2022)      |
+| Runtime Dependencies | None                | `node-opencc`              | `opencc-js`         | `opencc-js`           |
+| `s2t` / `t2s`        | ✅                  | ✅                         | ✅                  | ✅                    |
+| `s2tp` / `t2sp`      | ✅                  | ✅                         | ❌                  | ❌                    |
+| Offline              | ✅                  | ✅                         | ✅                  | ✅                    |
+| License              | Apache-2.0          | MIT                        | Not specified       | MIT                   |
+
+</details>
 
 Key reasons this extension was created:
 
@@ -74,12 +89,3 @@ Key reasons this extension was created:
 - [simptradconv-openccjs](https://github.com/jaquesyang/vscode-extension-simptradconv-openccjs) has not been updated since July 2023, only supports basic character-level conversion (no Taiwan phrase support), and depends on `opencc-js` as a runtime dependency.
 - [opencc-js](https://github.com/nk2028/opencc-js) is a general-purpose JavaScript library (not a VS Code extension). It depends on [opencc-data](https://github.com/nk2028/opencc-data) as its dictionary data source at runtime. Both projects' last commits were in November 2022, and they have open issues and pull requests with no maintainer response.
 - This extension bundles OpenCC dictionary data directly at build time, resulting in zero runtime dependencies and a self-contained `.vsix` package.
-
-## Credits
-
-- Dictionary data from [OpenCC](https://github.com/BYVoid/OpenCC) by BYVoid (Apache-2.0)
-- Inspired by [vscode-zh-convertor](https://github.com/hongfanmeng/vscode-zh-convertor)
-
-## License
-
-[Apache-2.0](LICENSE)
