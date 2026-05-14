@@ -15,7 +15,7 @@ A VS Code extension for converting between Simplified and Traditional Chinese, u
 
 ## Installation
 
-Download the latest `.vsix` from [GitHub Releases](https://github.com/guessi/vscode-opencc-convert/releases),
+Download the latest `.vsix` from [GitHub Releases](https://github.com/guessi/opencc-zh-converter/releases),
 then install it:
 
 ```bash
