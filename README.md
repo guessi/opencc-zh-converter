@@ -48,7 +48,7 @@ Or in VS Code: `Cmd+Shift+P` → `Extensions: Install from VSIX...` → select t
 
 ## Requirements
 
-- VS Code 1.97.0 or later
+- VS Code 1.120.0 or later
 
 ## Why This Extension?
 
