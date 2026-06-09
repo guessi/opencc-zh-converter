@@ -4,36 +4,43 @@
 
 # OpenCC 繁簡轉換
 
-A VS Code extension for converting between Simplified and Traditional Chinese, using dictionary data from [OpenCC](https://github.com/BYVoid/OpenCC).
+A cross-editor extension for converting between Simplified and Traditional Chinese. Works with VS Code and any editor that supports the VS Code extension API, using dictionary data from [OpenCC](https://github.com/BYVoid/OpenCC).
 
 ## Features
 
 - Convert selected text or the entire file
 - Simplified Chinese ↔ Traditional Chinese
-- Fully offline — no network access required
+- Fully offline, no network access required
 - Zero runtime dependencies
 
 ## Installation
 
+### Open VSX Registry
+
+This extension is available on [Open VSX Registry](https://open-vsx.org/extension/guessi/opencc-zh-converter). Install it directly from the built-in extension marketplace in any editor that uses [Open VSX Registry](https://open-vsx.org/), with no manual download required and automatic updates.
+
+### Manual install via `.vsix`
+
 Download the latest `.vsix` from [GitHub Releases](https://github.com/guessi/opencc-zh-converter/releases),
-then install it:
+then install it using the command for your editor:
 
-```bash
-code --install-extension opencc-zh-converter-*.vsix
-```
+- **VS Code:** `code --install-extension opencc-zh-converter-*.vsix`
+- **VSCodium:** `codium --install-extension opencc-zh-converter-*.vsix`
+- **Cursor:** `cursor --install-extension opencc-zh-converter-*.vsix`
+- **Windsurf:** `windsurf --install-extension opencc-zh-converter-*.vsix`
+- **Kiro:** `kiro --install-extension opencc-zh-converter-*.vsix`
 
-Or in VS Code: `Cmd+Shift+P` → `Extensions: Install from VSIX...` → select the `.vsix` file.
+Or use the Command Palette in any of these editors: `Cmd+Shift+P` → `Extensions: Install from VSIX...` → select the `.vsix` file.
+
+> **Why Open VSX Registry?** [Open VSX Registry](https://open-vsx.org/) is an open alternative to the [VS Code Marketplace](https://marketplace.visualstudio.com/) that works across all VS Code-compatible editors. The [VS Code Marketplace](https://marketplace.visualstudio.com/) is restricted to Microsoft's official VS Code builds by its [Terms of Service](https://aka.ms/vsmarketplace-ToU), so [Open VSX Registry](https://open-vsx.org/) is the only way to reach users of these editors through a built-in marketplace.
 
 ## Usage
 
 1. Select text in the editor (or leave empty to convert the entire file)
 2. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-3. Search for `OpenCC 繁簡轉換`, `s2tp`, `t2sp`, `s2t` or `t2s`
+3. Search for `OpenCC` and select a conversion command
 
-> **💡 Tip:** For most use cases, `s2tp` (Simplified → Taiwan Traditional) and `t2sp`
-> (Taiwan Traditional → Simplified) are recommended — they include Taiwan phrase-level
-> conversion for the most natural results. Use `s2t` / `t2s` for character-level-only
-> conversion without Taiwan-specific vocabulary.
+> **💡 Tip:** For most use cases, `s2tp` (Simplified → Taiwan Traditional) and `t2sp` (Taiwan Traditional → Simplified) are recommended, as they include Taiwan phrase-level conversion for the most natural results. Use `s2t` / `t2s` for character-level-only conversion without Taiwan-specific vocabulary.
 
 ## Commands
 
@@ -48,7 +55,7 @@ All commands are grouped under the `OpenCC 繁簡轉換` category in the Command
 
 ## Requirements
 
-- VS Code 1.120.0 or later
+- VS Code 1.74.0 or later, or any editor that supports the VS Code extension API
 
 ## Credits
 
@@ -70,15 +77,19 @@ All projects listed below are based on dictionary data from [OpenCC](https://git
 <details>
 <summary>Comparison with other extensions</summary>
 
-|                      | opencc-zh-converter | vscode-chinese-translation | vscode-zh-convertor | simptradconv-openccjs |
-| -------------------- | ------------------- | -------------------------- | ------------------- | --------------------- |
-| Maintenance Status   | Active              | Unmaintained (2016)        | Unmaintained (2021) | Unmaintained (2023)   |
-| Dictionary Data      | OpenCC (latest)     | node-opencc (2016)         | opencc-js (2022)    | opencc-js (2022)      |
-| Runtime Dependencies | None                | `node-opencc`              | `opencc-js`         | `opencc-js`           |
-| `s2t` / `t2s`        | ✅                  | ✅                         | ✅                  | ✅                    |
-| `s2tp` / `t2sp`      | ✅                  | ✅                         | ❌                  | ❌                    |
-| Offline              | ✅                  | ✅                         | ✅                  | ✅                    |
-| License              | Apache-2.0          | MIT                        | Not specified       | MIT                   |
+|                      | opencc-zh-converter                                           | vscode-chinese-translation | vscode-zh-convertor | simptradconv-openccjs |
+| -------------------- | ------------------------------------------------------------- | -------------------------- | ------------------- | --------------------- |
+| Maintenance Status   | Active                                                        | Unmaintained (2016)        | Unmaintained (2021) | Unmaintained (2023)   |
+| Dictionary Data      | OpenCC (latest)                                               | node-opencc (2016)         | opencc-js (2022)    | opencc-js (2022)      |
+| Runtime Dependencies | None                                                          | `node-opencc`              | `opencc-js`         | `opencc-js`           |
+| `s2t` / `t2s`        | ✅                                                            | ✅                         | ✅                  | ✅                    |
+| `s2tp` / `t2sp`      | ✅                                                            | ✅                         | ❌                  | ❌                    |
+| Searchable in        | Any editor using [Open VSX Registry](https://open-vsx.org/) ¹ | VS Code only ²             | VS Code only ²      | VS Code only ²        |
+| Offline              | ✅                                                            | ✅                         | ✅                  | ✅                    |
+| License              | Apache-2.0                                                    | MIT                        | Not specified       | MIT                   |
+
+¹ Published on [Open VSX Registry](https://open-vsx.org/), which is supported by all VS Code-compatible editors.
+² Published on [VS Code Marketplace](https://marketplace.visualstudio.com/) only, which is restricted to Microsoft's official VS Code builds by its [Terms of Service](https://aka.ms/vsmarketplace-ToU). Other VS Code-compatible editors cannot access it.
 
 </details>
 
