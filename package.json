@@ -21,7 +21,7 @@
     "url": "https://github.com/guessi/opencc-zh-converter"
   },
   "engines": {
-    "vscode": "^1.120.0"
+    "vscode": "^1.102.0"
   },
   "main": "./out/extension.js",
   "contributes": {
@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/vscode": "^1.120.0",
+    "@types/vscode": "^1.102.0",
     "eslint": "^10.3.0",
     "markdownlint-cli": "^0.48.0",
     "prettier": "^3.8.3",
