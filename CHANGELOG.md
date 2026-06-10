@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-06-10
+
+### Changed
+
+- Lower minimum VS Code engine requirement from `1.120.0` to `1.102.0` for broader editor compatibility
+- Update dev dependencies (eslint, prettier, typescript-eslint) and fix brace-expansion vulnerability
+
 ## [1.0.1] - 2026-05-14
 
 ### Changed
@@ -27,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Exclude incorrect TWPhrasesRev mapping "核心→內核" — "核心" (core) is not "內核" (kernel)
 
-[unreleased]: https://github.com/guessi/opencc-zh-converter/compare/v1.0.1...HEAD
+[unreleased]: https://github.com/guessi/opencc-zh-converter/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.2
 [1.0.1]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.1
 [1.0.0]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.0
