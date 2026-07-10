@@ -19,7 +19,8 @@ A cross-editor extension for converting between Simplified and Traditional Chine
 
 This extension is available on [Open VSX Registry](https://open-vsx.org/extension/guessi/opencc-zh-converter). Install it directly from the built-in extension marketplace in any editor that uses [Open VSX Registry](https://open-vsx.org/), with no manual download required and automatic updates.
 
-### Manual install via `.vsix`
+<details>
+<summary>Manual install via <code>.vsix</code></summary>
 
 Download the latest `.vsix` from [GitHub Releases](https://github.com/guessi/opencc-zh-converter/releases),
 then install it using the command for your editor:
@@ -31,6 +32,8 @@ then install it using the command for your editor:
 - **Kiro:** `kiro --install-extension opencc-zh-converter-*.vsix`
 
 Or use the Command Palette in any of these editors: `Cmd+Shift+P` → `Extensions: Install from VSIX...` → select the `.vsix` file.
+
+</details>
 
 > **Why Open VSX Registry?** [Open VSX Registry](https://open-vsx.org/) is an open alternative to the [VS Code Marketplace](https://marketplace.visualstudio.com/) that works across all VS Code-compatible editors. The [VS Code Marketplace](https://marketplace.visualstudio.com/) is restricted to Microsoft's official VS Code builds by its [Terms of Service](https://aka.ms/vsmarketplace-ToU), so [Open VSX Registry](https://open-vsx.org/) is the only way to reach users of these editors through a built-in marketplace.
 
@@ -95,8 +98,13 @@ All projects listed below are based on dictionary data from [OpenCC](https://git
 
 Key reasons this extension was created:
 
+<details>
+<summary>Detailed reasons</summary>
+
 - [vscode-chinese-translation](https://github.com/compulim/vscode-chinese-translation) has not been updated since March 2016, and depends on `node-opencc` (a C++ native addon) which requires native compilation and may not work in modern VS Code environments.
 - [vscode-zh-convertor](https://github.com/hongfanmeng/vscode-zh-convertor) has not been updated since August 2021, only supports basic character-level conversion (no Taiwan phrase support), and depends on `opencc-js` as a runtime dependency.
 - [simptradconv-openccjs](https://github.com/jaquesyang/vscode-extension-simptradconv-openccjs) has not been updated since July 2023, only supports basic character-level conversion (no Taiwan phrase support), and depends on `opencc-js` as a runtime dependency.
 - [opencc-js](https://github.com/nk2028/opencc-js) is a general-purpose JavaScript library (not a VS Code extension). It depends on [opencc-data](https://github.com/nk2028/opencc-data) as its dictionary data source at runtime. Both projects' last commits were in November 2022, and they have open issues and pull requests with no maintainer response.
 - This extension bundles OpenCC dictionary data directly at build time, resulting in zero runtime dependencies and a self-contained `.vsix` package.
+
+</details>
