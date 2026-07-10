@@ -55,7 +55,7 @@ All commands are grouped under the `OpenCC 繁簡轉換` category in the Command
 
 ## Requirements
 
-- VS Code 1.74.0 or later, or any editor that supports the VS Code extension API
+- VS Code 1.102.0 or later, or any editor that supports the VS Code extension API
 
 ## Credits
 
