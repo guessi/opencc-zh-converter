@@ -4,8 +4,8 @@ set -euo pipefail
 # Download OpenCC dictionary files and generate individual TypeScript modules.
 
 # Pin to a specific commit for reproducible builds.
-# As of May 10, 2026 the latest release is https://github.com/BYVoid/OpenCC/releases/tag/ver.1.3.1
-COMMIT="2f569603954f1cddfdef7b648e71e1aa0d1f47a3"
+# As of July 2, 2026 the latest release is https://github.com/BYVoid/OpenCC/releases/tag/ver.1.4.0
+COMMIT="664674f3565f75180c11c8ed2c8ee621952c310f"
 REPO="https://raw.githubusercontent.com/BYVoid/OpenCC/${COMMIT}/data/dictionary"
 DICT_DIR="src/dict"
 
