@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.5] - 2026-09-01
+
+### Changed
+
+- Update dictionary data to [OpenCC 1.4.2](https://github.com/BYVoid/OpenCC/releases/tag/ver.1.4.2)
+- Update dev dependencies (eslint, prettier, typescript-eslint)
+
 ## [1.0.4] - 2026-07-16
 
 ### Changed
@@ -49,7 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Exclude incorrect TWPhrasesRev mapping "核心→內核" — "核心" (core) is not "內核" (kernel)
 
-[unreleased]: https://github.com/guessi/opencc-zh-converter/compare/v1.0.4...HEAD
+[unreleased]: https://github.com/guessi/opencc-zh-converter/compare/v1.0.5...HEAD
+[1.0.5]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.5
 [1.0.4]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.4
 [1.0.3]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.3
 [1.0.2]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.2
