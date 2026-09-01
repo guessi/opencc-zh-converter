@@ -104,7 +104,7 @@ Key reasons this extension was created:
 - [vscode-chinese-translation](https://github.com/compulim/vscode-chinese-translation/commits/master) has not been updated since March 2016, and depends on `node-opencc` (a C++ native addon) which requires native compilation and may not work in modern VS Code environments.
 - [vscode-zh-convertor](https://github.com/hongfanmeng/vscode-zh-convertor/commits/master) has not been updated since August 2021, only supports basic character-level conversion (no Taiwan phrase support), and depends on `opencc-js` as a runtime dependency.
 - [simptradconv-openccjs](https://github.com/jaquesyang/vscode-extension-simptradconv-openccjs/commits/main) has not been updated since July 2023, only supports basic character-level conversion (no Taiwan phrase support), and depends on `opencc-js` as a runtime dependency.
-- [opencc-js](https://github.com/nk2028/opencc-js) is a general-purpose JavaScript library (not a VS Code extension). It depends on [opencc-data](https://github.com/nk2028/opencc-data) as its dictionary data source at runtime. Both projects' last commits were in November 2022, and they have open issues and pull requests with no maintainer response.
+- [opencc-js](https://github.com/nk2028/opencc-js) is a general-purpose JavaScript library (not a VS Code extension), actively maintained. It bundles dictionary data generated from [opencc-data](https://github.com/nk2028/opencc-data) at build time (a devDependency, not a runtime dependency), so it does not fetch dictionary files at runtime.
 - This extension bundles OpenCC dictionary data directly at build time, resulting in zero runtime dependencies and a self-contained `.vsix` package.
 
 </details>
