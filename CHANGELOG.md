@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-11-15
+
+### Changed
+
+- Required vscode ^1.125.0
+- Update dev dependencies (eslint, markdownlint-cli, prettier, typescript-eslint)
+
 ## [1.0.5] - 2026-09-01
 
 ### Changed
@@ -56,7 +63,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Exclude incorrect TWPhrasesRev mapping "核心→內核" — "核心" (core) is not "內核" (kernel)
 
-[unreleased]: https://github.com/guessi/opencc-zh-converter/compare/v1.0.5...HEAD
+[unreleased]: https://github.com/guessi/opencc-zh-converter/compare/v1.0.6...HEAD
+[1.0.6]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.6
 [1.0.5]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.5
 [1.0.4]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.4
 [1.0.3]: https://github.com/guessi/opencc-zh-converter/releases/tag/v1.0.3
