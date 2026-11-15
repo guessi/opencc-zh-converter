@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/vscode": "^1.125.0",
+    "@types/vscode": "^1.146.0",
     "eslint": "^10.14.0",
     "markdownlint-cli": "^0.50.0",
     "prettier": "^3.10.1",
